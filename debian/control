@@ -1,0 +1,13 @@
+Source: raid-pasta-2k
+Section: misc
+Priority: optional
+Maintainer: Actionschnitzel <actionschnitzel@guideos.de>
+Build-Depends: debhelper (>= 9), python3-all, python3-setuptools, rsync
+Standards-Version: 0.0.1
+Homepage: https://guideos.de
+
+Package: raid-pasta-2k
+Architecture: all
+Depends: ${misc:Depends}, python3, python3-tk, guideos-azure-ttk, mdadm
+Description: Raid configuration tool.
+ Raid configuration tool.

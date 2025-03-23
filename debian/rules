@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+
+PACKAGE :=raid-pasta-2k
+
+%:
+	dh $@
+
+override_dh_install:
+	# Erstellen der notwendigen Verzeichnisse
+	mkdir -p debian/$(PACKAGE)/usr/share/applications
+	mkdir -p debian/$(PACKAGE)/usr/share/icons/hicolor/256x256/apps
+	mkdir -p debian/$(PACKAGE)/usr/share/icons/hicolor/scalable/apps
+	mkdir -p debian/$(PACKAGE)/usr/bin
+	mkdir -p debian/$(PACKAGE)/usr/lib
+	mkdir -p debian/$(PACKAGE)/usr/share/doc/$(PACKAGE)
+
+	# Kopieren der Dateien
+	cp raid-pasta-2k.png debian/$(PACKAGE)/usr/share/icons/hicolor/256x256/apps/raid-pasta-2k.png
+	cp raid-pasta-2k.svg debian/$(PACKAGE)/usr/share/icons/hicolor/scalable/apps/raid-pasta-2k.svg	
+	cp LICENSE debian/$(PACKAGE)/usr/share/doc/$(PACKAGE)/LICENSE
+	cp -r raid-pasta-2k debian/$(PACKAGE)/usr/lib/
+	
+	# Erstellen der .desktop-Datei
+	./create_desktop_files.sh
+
+	# Setzen der Berechtigungen
+	chmod +x debian/$(PACKAGE)/usr/lib/raid-pasta-2k/main.py
+
+	# Erstellen der /bin/primo-di-tutto Datei
+	echo "#!/bin/bash" > debian/$(PACKAGE)/usr/bin/raid-pasta-2k
+	echo '/usr/lib/raid-pasta-2k/main.py "$@"' >> debian/$(PACKAGE)/usr/bin/raid-pasta-2k
+	chmod +x debian/$(PACKAGE)/usr/bin/raid-pasta-2k
+
+	dh_install

@@ -1,0 +1,35 @@
+raid-pasta-2k (0.0.2-4) unstable; urgency=medium
+
+  * Changed: Icons
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Sat, 15 Mar 2025 16:12:15 +0100
+
+raid-pasta-2k (0.0.2-3) unstable; urgency=medium
+
+  * Changed: Icons
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Sat, 15 Mar 2025 16:07:15 +0100
+
+raid-pasta-2k (0.0.2-2) unstable; urgency=medium
+
+  * Implementation of azure-ttk lib
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Sun, 19 Jan 2025 17:10:41 +0100
+
+raid-pasta-2k (0.0.2-1) unstable; urgency=medium
+
+  * Fixed Icons
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Tue, 14 Jan 2025 19:34:05 +0100
+
+raid-pasta-2k (0.0.2) unstable; urgency=medium
+
+  * Fixed: No Menu Icon
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Tue, 14 Jan 2025 18:47:17 +0100
+
+raid-pasta-2k (0.0.1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Tue, 14 Jan 2025 18:24:32 +0100
